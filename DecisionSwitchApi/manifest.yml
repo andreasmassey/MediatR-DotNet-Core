@@ -1,0 +1,17 @@
+﻿applications:
+- name: decision-service-api
+  disk_quota: 512MB
+  instances: 1
+  buildpack: binary_buildpack
+  memory: 1024MB
+  stack: windows2016
+  command:  ./Decision.Api
+  path: ./bin/Debug/netcoreapp2.1/win10-x64/publish
+  health-check-type: process
+  env:
+    ENV: sandbox
+    spring:cloud:config:label: decision-test
+  services:
+  - config_server
+  routes:
+  - route: https://decision-service-api.sandbox.apps.pcf.loanliner.com/
