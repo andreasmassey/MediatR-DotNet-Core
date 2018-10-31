@@ -18,8 +18,8 @@ namespace Decision.Api.Controllers
 
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(GetDecisionContract))]
-        [Route("v1/getdecision")]
-        public async Task<ActionResult<GetDecisionContract.Response>> GetDecisionAsync([FromBody] GetDecisionContract.Request request)
+        [Route("v1")]
+        public async Task<ActionResult<GetDecisionContract.Response>> Post([FromBody] GetDecisionContract.Request request)
         {
             return await _mediator.Send<GetDecisionContract.Response>(request);
         }
