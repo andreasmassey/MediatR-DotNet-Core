@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Decision.Contract.Binder;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Decision.Contract.Features
 {
