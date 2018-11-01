@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using Autofac;
 using Decision.Api.Features.Decisions.DecisionEngineHandlers;
-using Moq;
 
 namespace Decision.Api.Tests
 {
@@ -22,8 +20,8 @@ namespace Decision.Api.Tests
 
         protected virtual void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.Register(x => new Mock<IEnumerable<IDecisionEngineHandler>>().Object);
-
+            builder.RegisterType<LegacyDecisionEngineHandler>().As<IDecisionEngineHandler>();
+            builder.RegisterType<TemenosDecisionEngineHandler>().As<IDecisionEngineHandler>();
         }
     }
 }

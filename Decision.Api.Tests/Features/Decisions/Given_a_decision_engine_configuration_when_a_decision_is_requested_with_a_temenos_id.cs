@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
+using Autofac;
 using Decision.Api.Features.Decisions;
 using Decision.Api.Features.Decisions.DecisionEngineHandlers;
 using Decision.Contract.Constants;
@@ -15,13 +16,8 @@ namespace Decision.Api.Tests.Features.Decisions
 
         public Given_a_decision_engine_configuration_when_a_decision_is_requested_with_a_temenos_id()
         {
-            var decisionHandlers = new List<IDecisionEngineHandler>
-            {
-                new LegacyDecisionEngineHandler(),
-                new TemenosDecisionEngineHandler()
-            };
-
-            var handler = new GetDecision.Handler(decisionHandlers);
+            var engineHandlers = Container.Resolve<IEnumerable<IDecisionEngineHandler>>();
+            var handler = new GetDecision.Handler(engineHandlers);
             _response = handler.Handle(new GetDecisionContract.Request{ DecisionEngineId = DecisionEngineConstants.Temenos }, new CancellationToken()).Result;
         }
 
