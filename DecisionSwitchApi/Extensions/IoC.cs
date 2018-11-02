@@ -11,7 +11,6 @@ namespace Decision.Api.Extensions
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterAssemblyTypes(typeof(IoC).Assembly).AsClosedTypesOf(typeof(IDecisionEngineHandler));
             builder.RegisterMediatRHandlers();
             builder.Populate(services);
 

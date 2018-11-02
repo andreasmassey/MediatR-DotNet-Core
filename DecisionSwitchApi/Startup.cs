@@ -31,6 +31,7 @@ namespace Decision.Api
         {
             services.AddLogging();
             services.AddOptions();
+            services.AddCors();
 
             if (Configuration.HasCloudFoundryServiceConfigurations())
             {
@@ -69,6 +70,11 @@ namespace Decision.Api
             });
 
             app.UseHttpsRedirection();
+
+            app.UseCors(
+                options => options.WithOrigins("http://localhost:54339/").AllowAnyMethod()
+            );
+
             app.UseMvc();
 
             if (configuration.HasCloudFoundryServiceConfigurations())

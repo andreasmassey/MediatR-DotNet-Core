@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Api", "DecisionSwi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{CE7DF3DA-AC6C-49AD-87B2-B88850F3474A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Api.Contract.Tests", "Decision.Switch.Contract.Tests\Decision.Api.Contract.Tests.csproj", "{47C68748-92CB-4478-958F-D02C5C15EA9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Service.Contract.MockServer", "Decision.Switch.Contract.Tests\Decision.Service.Contract.MockServer.csproj", "{47C68748-92CB-4478-958F-D02C5C15EA9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Contract", "Decision.Contract\Decision.Contract.csproj", "{6226FCFF-F5AF-4A82-A4A6-5626602AA2EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Api.Tests", "Decision.Api.Tests\Decision.Api.Tests.csproj", "{F6C618B5-E5B5-4418-9AEE-B4DF403A1140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Api.Tests", "Decision.Api.Tests\Decision.Api.Tests.csproj", "{F6C618B5-E5B5-4418-9AEE-B4DF403A1140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Api.IntegrationTests", "Decision.Api.IntegrationTests\Decision.Api.IntegrationTests.csproj", "{85D424EB-BBD2-4DE7-BC29-0E1239EA2196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Api.IntegrationTests", "Decision.Api.IntegrationTests\Decision.Api.IntegrationTests.csproj", "{85D424EB-BBD2-4DE7-BC29-0E1239EA2196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
